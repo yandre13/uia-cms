@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_service_heroes",
+  "info": {
+    "displayName": "Service Hero"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "blocks",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

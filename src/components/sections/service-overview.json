@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_service_overviews",
+  "info": {
+    "displayName": "Service Overview"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "cards.service-feature-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_cards_service_feature_items",
+  "info": {
+    "displayName": "Service feature item"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "title": {
+      "type": "blocks",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "features": {
+      "type": "component",
+      "component": "lists.service-feature",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

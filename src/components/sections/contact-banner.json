@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_contact_banners",
+  "info": {
+    "displayName": "Contact Banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}
