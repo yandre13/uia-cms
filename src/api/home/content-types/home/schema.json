@@ -9,6 +9,64 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
-  "attributes": {}
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "hero": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.home-hero",
+      "repeatable": false,
+      "required": true
+    },
+    "feature_highlight": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "cards.home-feature-highlight",
+      "repeatable": false,
+      "required": true
+    },
+    "services": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.service-benefits",
+      "repeatable": false,
+      "required": true
+    },
+    "contact": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.contact-banner",
+      "repeatable": false,
+      "required": true
+    }
+  }
 }

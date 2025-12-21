@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_home_heroes",
+  "info": {
+    "displayName": "Home Hero"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "blocks",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -14,6 +14,22 @@ export interface CardsCard extends Struct.ComponentSchema {
   };
 }
 
+export interface CardsHomeFeatureHighlight extends Struct.ComponentSchema {
+  collectionName: 'components_cards_home_feature_highlights';
+  info: {
+    displayName: 'Home Feature Highlight';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String & Schema.Attribute.Required;
+    cta: Schema.Attribute.Component<'shared.cta', false> &
+      Schema.Attribute.Required;
+    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface CardsServiceFeatureItem extends Struct.ComponentSchema {
   collectionName: 'components_cards_service_feature_items';
   info: {
@@ -50,6 +66,20 @@ export interface SectionsContactBanner extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SectionsHomeHero extends Struct.ComponentSchema {
+  collectionName: 'components_sections_home_heroes';
+  info: {
+    displayName: 'Home Hero';
+  };
+  attributes: {
+    badge_text: Schema.Attribute.String & Schema.Attribute.Required;
+    cta: Schema.Attribute.Component<'shared.cta', false> &
+      Schema.Attribute.Required;
+    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    title: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -108,9 +138,11 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'cards.card': CardsCard;
+      'cards.home-feature-highlight': CardsHomeFeatureHighlight;
       'cards.service-feature-item': CardsServiceFeatureItem;
       'lists.service-feature': ListsServiceFeature;
       'sections.contact-banner': SectionsContactBanner;
+      'sections.home-hero': SectionsHomeHero;
       'sections.service-benefits': SectionsServiceBenefits;
       'sections.service-hero': SectionsServiceHero;
       'sections.service-overview': SectionsServiceOverview;

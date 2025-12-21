@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_cards_home_feature_highlights",
+  "info": {
+    "displayName": "Home Feature Highlight"
+  },
+  "options": {},
+  "attributes": {
+    "badge_text": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "blocks",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false,
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}
