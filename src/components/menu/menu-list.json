@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_menu_menu_lists",
+  "info": {
+    "displayName": "Menu list"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "menu.menu-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

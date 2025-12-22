@@ -56,6 +56,29 @@ export interface ListsServiceFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface MenuMenuItem extends Struct.ComponentSchema {
+  collectionName: 'components_menu_menu_items';
+  info: {
+    displayName: 'Menu item';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    path: Schema.Attribute.String & Schema.Attribute.Required;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface MenuMenuList extends Struct.ComponentSchema {
+  collectionName: 'components_menu_menu_lists';
+  info: {
+    displayName: 'Menu list';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'menu.menu-item', true>;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SectionsContactBanner extends Struct.ComponentSchema {
   collectionName: 'components_sections_contact_banners';
   info: {
@@ -141,6 +164,8 @@ declare module '@strapi/strapi' {
       'cards.home-feature-highlight': CardsHomeFeatureHighlight;
       'cards.service-feature-item': CardsServiceFeatureItem;
       'lists.service-feature': ListsServiceFeature;
+      'menu.menu-item': MenuMenuItem;
+      'menu.menu-list': MenuMenuList;
       'sections.contact-banner': SectionsContactBanner;
       'sections.home-hero': SectionsHomeHero;
       'sections.service-benefits': SectionsServiceBenefits;
