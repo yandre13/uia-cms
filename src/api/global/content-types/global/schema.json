@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "menus",
+  "collectionName": "globals",
   "info": {
-    "singularName": "menu",
-    "pluralName": "menus",
-    "displayName": "Menu"
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Global"
   },
   "options": {
     "draftAndPublish": true
@@ -22,28 +22,18 @@
           "localized": true
         }
       },
-      "default": "Menu",
       "required": true
     },
-    "home": {
+    "quick_links": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "menu.menu-item",
-      "repeatable": false
-    },
-    "about": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "menu.menu-item",
-      "repeatable": false
+      "component": "menu.menu-list",
+      "repeatable": false,
+      "required": true
     },
     "services": {
       "type": "component",
@@ -53,7 +43,8 @@
         }
       },
       "component": "menu.menu-list",
-      "repeatable": false
+      "repeatable": false,
+      "required": true
     },
     "contact": {
       "type": "component",
@@ -62,8 +53,17 @@
           "localized": true
         }
       },
-      "component": "menu.menu-item",
+      "component": "menu.menu-list",
       "repeatable": false,
+      "required": true
+    },
+    "footer_description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "required": true
     }
   }
